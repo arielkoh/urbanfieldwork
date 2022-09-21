@@ -1,0 +1,552 @@
+:root {
+  --col-nav__bg: rgb(250, 250, 230);
+  --col-nav__fg: rgb(100, 100, 150);
+  --col__white: rgb(255, 255, 255);
+  --col__black: rgb(0, 0, 0);
+  --col__bg-1: rgb(220, 220, 250);
+  --col__bg-2: rgb(220, 250, 220);
+  --col__bg-3: rgb(250, 250, 220);
+  --col__bg-4: rgb(250, 240, 240);
+  --col__fg-1: rgb(40, 40, 100);
+  --col__fg-2: rgb(40, 80, 40);
+  --col__fg-3: rgb(80, 40, 40);
+  --col__sub: rgb(60, 60, 80);
+  --col__ham-fg: rgb(40, 80, 40);
+  --col__ham-bg: rgb(220, 250, 220);
+  --col__link-1: rgb(4, 120, 87);
+  --col__gray-50: #f9fafb;
+  --col__gray-100: #f3f4f6;
+  --col__gray-200: #e5e7eb;
+  --col__gray-300: #d1d5db;
+  --col__gray-400: #9ca3af;
+  --col__gray-500: #6b7280;
+  --col__gray-600: #4b5563;
+  --col__gray-700: #374151;
+  --col__gray-800: #1f2937;
+  --col__gray-900: #111827;
+  --col__emerald-500: #10b981;
+  --col__emerald-700: #047857;
+  --col__emerald-800: #065f46;
+  --col__violet-700: #6d28d9;
+  --col__indigo-50: #eef2ff;
+  --col__indigo-100: #e0e7ff;
+  --col__indigo-200: #c7d2fe;
+  --col__indigo-300: #a5b4fc;
+  --col__indigo-400: #818cf8;
+
+  --padding__large: 8rem;
+  --padding__normal: 2rem;
+  --padding__small: 1rem;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  transition: 0.5s;
+}
+
+a:hover {
+  transition: 0.5s;
+}
+
+p {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  margin-bottom: 1rem;
+}
+
+.link__rounded {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5rem;
+  border: solid 1px;
+}
+
+.link__rounded:hover {
+  background: #fff;
+}
+
+.link__list-item {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Hero Element for the Landing page */
+
+.hero__container {
+  width: 100%;
+}
+
+.hero__image,
+.hero__image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.hero__overlay {
+  color: var(--col__bg-1);
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.hero__overlay {
+  top: 20vh;
+  color: var(--col__bg-1);
+  font-size: 5rem;
+  font-weight: 200;
+  left: var(--padding__normal);
+  min-width: 50vw;
+  text-align: left;
+  position: absolute;
+}
+
+/* Default Content Elements */
+
+.content-default__teaser {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  max-width: 960px;
+  padding: var(--padding__normal);
+}
+
+.content-default__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: var(--padding__normal);
+}
+
+.content-default__column-1 {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content-default__column-2 {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex: 2;
+}
+
+.content-default__image {
+  width: 100%;
+}
+
+.content-default__full-image img {
+  display: block;
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background: var(--col__gray-900);
+  z-index: 60;
+  width: 100%;
+  min-height: 30vh;
+  position: absolute;
+}
+
+.footer__content {
+  padding: var(--padding__normal);
+  color: var(--col__gray-500);
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+/* Page Transition */
+
+.transition-default {
+  position: fixed;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: var(--col__bg-2);
+  transition: 0.4s ease-out;
+}
+
+.transition-default.is-active {
+  background-color: var(--col__bg-1);
+  top: 0;
+  opacity: 1;
+}
+
+/*Table */
+
+.data-table__outer {
+  width: 100%;
+}
+
+.data-table__head,
+.data-table__head th {
+  border-bottom: 1px solid var(--col__gray-500);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.data-table__body,
+.data-table__body td {
+  border-bottom: 1px solid var(--col__gray-400);
+  padding: 0.5rem 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Gallery, series of images arranged 
+ * in a grid which adapts to window width 
+*/
+
+.content-gallery__container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+.content-gallery__figure {
+  flex-grow: 0;
+  flex-basis: 512px;
+  margin: 1rem;
+}
+
+.content-gallery__figure figcaption {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.content-gallery__figure img {
+  height: auto;
+  max-width: 680px;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image Slider Gallery Splide */
+
+.splide-gallery {
+  height: 100%;
+  width: 100%;
+}
+
+.splide-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+button.splide__arrow {
+  background: transparent;
+}
+
+.splide__arrow svg {
+  fill: rgb(255, 255, 255);
+}
+
+.splide__pagination {
+  top: 105%;
+}
+
+button.splide__pagination__page {
+  background: #000;
+  margin: 4px;
+  width: 3px;
+  height: 3px;
+}
+
+/* Team page */
+
+.team__statement {
+  font-size: 3rem;
+  position: fixed;
+  margin: 0 2rem;
+  top: 6rem;
+  z-index: 10;
+  max-width: 1280px;
+}
+
+.gallery-image {
+  position: absolute;
+}
+
+.team__gallery-images {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.sketch__full iframe {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+
+/* Headings*/
+
+.heading__sub-1 {
+  color: rgb(60, 60, 80);
+  padding-bottom: 4px;
+  padding-right: 4px;
+  border-bottom: 2px solid rgb(60, 60, 80);
+}
+
+.heading__sub-2 {
+  color: rgb(60, 60, 80);
+  padding-bottom: 2rem;
+}
+.heading__sub-2::before {
+  content: "—— ";
+}
+
+/* padding */
+
+.padding__top-xlarge {
+  padding-top: 16rem;
+}
+.padding__top-large {
+  padding-top: 8rem;
+}
+.padding__top-normal {
+  padding-top: 2rem;
+}
+.padding__top-small {
+  padding-top: 1rem;
+}
+.padding__bottom-xlarge {
+  padding-bottom: 16rem;
+}
+.padding__bottom-large {
+  padding-bottom: 8rem;
+}
+.padding__bottom-normal {
+  padding-bottom: 2rem;
+}
+.padding__bottom-small {
+  padding-bottom: 1rem;
+}
+
+.padding__left-xlarge {
+  padding-left: 16rem;
+}
+
+.padding__left-large {
+  padding-left: 8rem;
+}
+
+.padding__left-normal {
+  padding-left: 2rem;
+}
+
+.padding__left-small {
+  padding-left: 1rem;
+}
+
+.margin__left-xlarge {
+  margin-left: 16rem;
+}
+
+.margin__left-large {
+  margin-left: 8rem;
+}
+
+.margin__left-normal {
+  margin-left: 2rem;
+}
+
+.margin__left-small {
+  margin-left: 1rem;
+}
+
+/* standard width, used for text blocks and images */
+.max-width__1-4 {
+  max-width: 320px;
+  width: 25%;
+}
+.max-width__2-4 {
+  max-width: 640px;
+  width: 50%;
+}
+.max-width__3-4 {
+  max-width: 960px;
+  width: 75%;
+}
+
+.max-width__1-2 {
+  max-width: 640px;
+  width: 50%;
+}
+
+.max-width__1-3 {
+  max-width: 512px;
+  width: 33%;
+}
+.max-width__2-3 {
+  max-width: 1024px;
+  width: 67%;
+}
+.max-width__full {
+  max-width: 100%;
+  width: 100%;
+}
+.width__50 {
+  width: 50%;
+}
+
+.bounce {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: 0;
+  margin-top: -25px;
+  margin-left: -25px;
+  height: 50px;
+  width: 50px;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+@-moz-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+@-o-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+/* 
+ * Media Queries
+ * Adjust layout based on screen width.
+ * media query specific styles, these styles are changed and apply 
+ * when the website is used on a mobile device in portrait mode. 
+*/
+
+@media only screen and (orientation: portrait) and (min-device-width: 375px) {
+  .content-default__row {
+    flex-direction: column;
+    gap: 1rem;
+    padding: var(--padding__small);
+  }
+
+  .content-default__row h2 {
+    border: 0;
+  }
+
+  .content-default__teaser {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding: var(--padding__small);
+  }
+
+  .content-gallery__figure {
+    margin: 1rem 0;
+  }
+
+  .max-width__1-4,
+  .max-width__2-4,
+  .max-width__3-4,
+  .max-width__1-2,
+  .max-width__1-3,
+  .max-width__2-3 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .padding__left-xlarge,
+  .padding__left-large,
+  .padding__left-normal,
+  .padding__left-small {
+    padding-left: 0;
+  }
+
+  .p__side {
+    width: 85%;
+    max-width: 85%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1920px) and (min-width: 1280px) {
+  .content-default__row {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}

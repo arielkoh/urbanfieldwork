@@ -1,0 +1,120 @@
+/* 
+ * Top menu bar navigation.
+ * changes to hamburger-menu when width is below threshold.
+ */
+
+.main-nav__bar {
+  background: var(--col-nav__bg);
+  border-bottom: 1px solid var(--col-nav__fg);
+  color: var(--col-nav__fg);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.man-nav__current {
+  font-style: italic;
+}
+
+.main-nav__color-mode-1 {
+  background: var(--col__bg-1);
+  color: var(--col__fg-1);
+}
+
+.main-nav__color-mode-2 {
+  background: var(--col__bg-2);
+  color: var(--col__fg-2);
+}
+
+.main-nav__color-mode-3 {
+  background: var(--col__bg-3);
+  color: var(--col__fg-3);
+}
+
+.main-nav__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.main-nav__item,
+.main-nav__title {
+  font-size: 1rem;
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+
+.main-nav__item a {
+  color: inherit;
+  display: block;
+}
+
+.main-nav__item a:hover {
+  color: var(--col__emerald-500);
+}
+
+.main-nav__ham {
+  display: none;
+  padding: var(--padding__normal);
+}
+
+.main-nav__ham-bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 4px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--col__gray-800);
+}
+
+@media only screen and (max-width: 768px) {
+  .main-nav__list {
+    align-items: flex-start;
+    background: var(--col__ham-bg);
+    color: var(--col__ham-fg);
+    flex-direction: column;
+    height: 100vh;
+    left: -100%;
+    padding-top: 20vh;
+    position: fixed;
+    text-align: left;
+    transition: 0.3s;
+    width: 100%;
+  }
+
+  .main-nav__list.active {
+    left: 0;
+  }
+
+  .main-nav__item {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-left: 10%;
+    padding: 0;
+    width: 80%;
+  }
+
+  .main-nav__ham {
+    display: block;
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  .main-nav__ham.active .main-nav__ham-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .main-nav__ham.active .main-nav__ham-bar:nth-child(1) {
+    -webkit-transform: translateY(3px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .main-nav__ham.active .main-nav__ham-bar:nth-child(3) {
+    -webkit-transform: translateY(-3px) rotate(-45deg);
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}

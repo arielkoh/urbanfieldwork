@@ -1,0 +1,283 @@
+*,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+/* Headlings */
+
+.heading__normal {
+  font-size: 2.25rem;
+}
+
+.heading__sub-1 {
+  font-size: 1.5rem;
+  color: rgb(60, 60, 80);
+  border-bottom: 2px solid rgb(60, 60, 80);
+}
+
+.heading__sub-2 {
+  font-size: 1.5rem;
+  color: rgb(60, 60, 80);
+}
+
+/* Paragraphs */
+
+p {
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+.p__xlarge {
+  font-size: 4rem;
+  line-height: 125%;
+}
+
+.p__large {
+  font-size: 2.25rem;
+  line-height: 125%;
+}
+
+.p__small {
+  font-size: 1rem;
+  line-height: 125%;
+}
+
+.p__side {
+  font-size: 1rem;
+  line-height: 125%;
+  width: 75%;
+  max-width: 85%;
+}
+
+.link__default {
+  color: rgb(6, 95, 70);
+}
+
+.link__rounded {
+  font-size: 1.5rem;
+}
+
+.link__rounded:hover {
+  background: #fff;
+}
+
+/* Menu */
+
+.main-nav__item,
+.main-nav__title {
+  font-size: 1.25rem;
+}
+
+.man-nav__current {
+  font-style: italic;
+}
+
+.main-nav__color-mode-1 {
+  background: rgb(220, 220, 250);
+  color: rgb(40, 40, 100);
+}
+
+.main-nav__color-mode-2 {
+  background: rgb(220, 250, 220);
+  color: rgb(40, 80, 40);
+}
+
+.main-nav__color-mode-3 {
+  background: rgb(250, 250, 220);
+  color: rgb(80, 80, 40);
+}
+
+.main-nav__color-mode-4 {
+  background: rgb(250, 240, 240);
+  color: rgb(80, 40, 40);
+}
+
+/* Content Styling */
+
+.hero__container {
+  width: 100%;
+}
+
+.hero__overlay {
+  color: var(--col__bg-1);
+  font-size: 5rem;
+}
+
+.content-gallery__figure figcaption {
+  font-size: 0.9rem;
+  color: rgb(17, 24, 39);
+}
+
+.footer {
+  background: rgb(17, 24, 39);
+  color: rgb(107, 114, 128);
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+/*Table */
+
+.data-table__head,
+.data-table__head th {
+  border-bottom: 1px solid rgb(107, 114, 128);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.data-table__body,
+.data-table__body td {
+  border-bottom: 1px solid rgb(156, 163, 174);
+  font-size: 1.25rem;
+}
+
+.transition-default {
+  background-color: rgb(220, 250, 220);
+}
+
+.transition-default.is-active {
+  background-color: rgb(220, 220, 250);
+}
+
+/*
+ * Colors and Sizes
+ * a set of predefined classes to quickly set 
+ * font-size and custom foreground and background 
+ * colors in a html document.
+ */
+
+/* pre-defined colors */
+.bg__white {
+  background: rgb(255, 255, 255);
+}
+.bg__black {
+  background: rgb(0, 0, 0);
+}
+
+.bg__gray-300 {
+  background: rgb(209, 213, 219);
+}
+
+.bg__gray-400 {
+  background: rgb(156, 163, 175);
+}
+
+.bg__gray-500 {
+  background: rgb(107, 114, 128);
+}
+
+.bg__gray-800 {
+  background: rgb(31, 41, 55);
+}
+
+.bg__1 {
+  background: rgb(220, 220, 250);
+}
+.bg__2 {
+  background: rgb(220, 250, 220);
+}
+.bg__3 {
+  background: rgb(250, 250, 220);
+}
+.bg__4 {
+  background: rgb(250, 240, 240);
+}
+
+.fg__white {
+  color: rgb(255, 255, 255);
+}
+.fg__black {
+  color: rgb(0, 0, 0);
+}
+
+.fg__gray-300 {
+  color: rgb(209, 213, 219);
+}
+
+.fg__gray-400 {
+  color: rgb(156, 163, 175);
+}
+
+.fg__gray-500 {
+  color: rgb(107, 114, 128);
+}
+
+.fg__gray-800 {
+  color: rgb(31, 41, 55);
+}
+
+.fg__1 {
+  color: rgb(40, 40, 100);
+}
+.fg__2 {
+  color: rgb(40, 80, 40);
+}
+.fg__3 {
+  color: rgb(80, 80, 40);
+}
+.fg__4 {
+  color: rgb(80, 40, 40);
+}
+
+.fg__red {
+  color: rgb(252, 110, 99);
+}
+
+/* 
+ * Media Queries
+ * Adjust layout based on screen width.
+ * media query specific styles, these styles are changed and apply 
+ * when the website is used on a mobile device in portrait mode. 
+*/
+
+@media only screen and (orientation: portrait) and (min-device-width: 375px) {
+  .content-default__teaser {
+    padding: var(--padding__small);
+  }
+
+  .content-default__row h2 {
+    border: 0;
+  }
+
+  .link__rounded {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .heading__normal {
+    font-size: 2rem;
+  }
+
+  .heading__sub-1,
+  .heading__sub-2 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .p__large {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .p__xlarge {
+    font-size: 2.25rem;
+  }
+
+  .p__side {
+    font-size: 0.75rem;
+    width: 85%;
+    max-width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-nav__item {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+}

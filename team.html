@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    README
+    To make changes to the document below, you need to read through 
+    the following HTML code and comments. Content blocks can be identified 
+    by their id and class name. Read through the code thoroughly so that you 
+    can make modifications if necessary. Ideally, you will understand the 
+    structure of the HTML code below so that you can add your own content 
+    blocks in the design that suits you best.
+    -->
+
+  <head>
+    <!-- @make-changes-here -->
+    <title>CiD August – November 2021, Information Design Project.</title>
+
+    <!-- Meta information, for machines to read, SEO -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="Author" content="" />
+    <meta name="keywords" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <!-- Load StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+    <!-- Load external Fonts-->
+
+    <!-- 
+      @make-changes-here 
+      if you like to use a different font, keep in mind that you need
+      to make changes to the styles.css file as well.
+    -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap"
+    />
+
+    <!-- some animate on scroll js libraries -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+    ></script>
+
+    <!-- Image Slider Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Page transition layer -->
+    <div class="transition transition-default is-active"></div>
+
+    <!-- Main content container -->
+    <div class="container">
+      <!-- Header Menu -->
+      <nav class="main-nav__bar main-nav__color-mode-4">
+        <!-- @make-changes-here -->
+        <a href="./index.html" class="main-nav__title">Your logo or name.</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="./index.html">Index</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="./urban-fieldworks.html">Urban Fieldworks</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="./code-and-data.html">Code and Data</a>
+          </li>
+          <li class="main-nav__item man-nav__current">
+            <a href="./team.html">Team</a>
+          </li>
+        </ul>
+        <div class="main-nav__ham">
+          <span class="main-nav__ham-bar"></span>
+          <span class="main-nav__ham-bar"></span>
+          <span class="main-nav__ham-bar"></span>
+        </div>
+      </nav>
+
+      <main>
+        <!-- 
+          @make-changes-here 
+          start making changes by replacing the placeholders 
+          in the following, use your own content. Add code blocks
+          where necessary by copy-pasting existing blocks. Replace 
+          images by renaming the src for img elements below. 
+          Images must be placed into the assets folder, remove 
+          those images that you don't need.
+        -->
+
+        <section id="team__statement">
+          <div class="team__statement disable-select">
+            <h2 class="headling__small fg__white">Heng Yen Pin Livia, Koh Qing Wen, Ariel, Sherrell Kong Xin Yin.</h2>
+            <p class="padding__top-normal p__xlarge fg__red">
+                There are so many ways and methods data can be represented. As a team, we did not just discover the different types of graphs, we also learnt to craft and sort-of code them effectively. Through their diverse strengths, we managed to help each other through the different group activities well and efficiently.
+            </p>
+          </div>
+        </section>
+
+        <section id="team__gallery">
+          <div class="team__gallery-images bg__gray-800">
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="p__small footer__content">
+          Computation in Design<br />Information Design Project<br />2021.
+        </p>
+      </footer>
+    </div>
+
+    <!-- finally, load our main javascript file -->
+    <script src="./js/main.js"></script>
+    <script>
+      dragImages("team__gallery", "gallery-image");
+    </script>
+  </body>
+</html>
